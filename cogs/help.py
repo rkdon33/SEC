@@ -11,6 +11,7 @@ class HelpCog(commands.Cog):
             title="SecureAura Bot Commands",
             description=(
                 "**Moderation Commands:**\n"
+                
                 "`/kick` or `?kick`\n"
                 "- To kick member from server\n"
                 "`/ban` or `?ban`\n"
@@ -19,8 +20,17 @@ class HelpCog(commands.Cog):
                 "- To mute (timeout) member\n"
                 "`/clear` or `?clear`\n"
                 "- To clear chats from text channels\n\n"
+                "**AntiNuke Features**\n"
+                "`/antinall enable/disable`\n"
+               "- To enable/disable all anti features\n"
+                "`/antinuke enable/disable`\n"
+                "- To enable/disable anti nuke features\n"
+                "`/antibotadd enable/disable`\n"
+                "-To enable/disable anti bot add features\n"
+                "`/antiraid enable/disable`\n"
+                "-To enable/disable anti raid features\n\n"
                 "**Log Channel Command:**\n"
-                "`/logs`\n"
+                "`/logschannel create`\n"
                 "- To create logs channel\n\n"
                 "**Other Slash Command:**\n"
                 "`/msg`\n"
