@@ -1,0 +1,15 @@
+{
+  "guild_id": {
+    "type": "normal",
+    "message": "Welcome to our server, {user}!",
+    "channel_id": 123456789
+  },
+  "guild_id2": {
+    "type": "embed",
+    "title": "Welcome, {user}!",
+    "description": "We're glad you joined.",
+    "footer": "Enjoy your stay!",
+    "image": "https://example.com/image.png",
+    "channel_id": 987654321
+  }
+}
