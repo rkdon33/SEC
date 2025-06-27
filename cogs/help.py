@@ -32,7 +32,11 @@ class HelpCog(commands.Cog):
                 "**Log Channel Command:**\n"
                 "`/logschannel create`\n"
                 "- To create logs channel\n\n"
-                "**Other Slash Command:**\n"
+                "**Extra Features Commands:**\n"
+                "`/setup_greet`\n"
+                "- To setup welcome message\n"
+                "`/greettest` or `?greettest`\n"
+                "- To check how welcome message looks like\n"
                 "`/msg`\n"
                 "- To send message using bot"
             ),
