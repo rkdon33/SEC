@@ -57,9 +57,10 @@ async def get_or_create_premium_log_channel(guild):
         return channel
     try:
         overwrites = {
-            guild.default_role: discord.PermissionOverwrite(read_messages=True, send_messages=True)
+            guild.default_role: discord.PermissionOverwrite(read_messages=False),
+            guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True)
         }
-        channel = await guild.create_text_channel("premium-logs", overwrites=overwrites, reason="Premium logs channel created")
+        channel = await guild.create_text_channel("premium-logs", overwrites=overwrites, reason="Premium logs channel created (private)")
         return channel
     except Exception:
         for c in guild.text_channels:
