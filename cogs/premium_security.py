@@ -62,7 +62,6 @@ async def get_or_create_premium_log_channel(guild):
         channel = await guild.create_text_channel("premium-logs", overwrites=overwrites, reason="Premium logs channel created")
         return channel
     except Exception:
-        # Fallback: use first writable channel
         for c in guild.text_channels:
             if c.permissions_for(guild.me).send_messages:
                 return c
@@ -119,7 +118,7 @@ class PremiumSecurity(commands.Cog):
             label = PREMIUM_LABELS[key]
             lines.append(f"{emoji} {label}:\n- {state}")
         embed = discord.Embed(
-            title="AntiPremium Feature Pannel",
+            title="AntiPremium Feature Panel",
             description="\n\n".join(lines),
             color=discord.Color.purple()
         )
@@ -187,11 +186,10 @@ class PremiumSecurity(commands.Cog):
                         f"- Anti Invite Delete\n"
                         f"- Anti Ghost Ping\n"
                         f"- Anti Spam**\n\n"
-                        f"**Note:**\nUse (`/antipremium`) to setup premium features.",
+                        f"**Note:**\nUse (/antipremium) to setup premium features.",
             color=discord.Color.gold()
         )
 
-        # Create or get premium-logs channel and send message
         if server:
             log_channel = await get_or_create_premium_log_channel(server)
             if log_channel:
@@ -228,7 +226,6 @@ class PremiumSecurity(commands.Cog):
         if expired:
             save_premium(data)
 
-    # --- EVENT HANDLERS FOR ALL PREMIUM FEATURES ---
     @commands.Cog.listener()
     async def on_guild_update(self, before, after):
         if not is_premium(after.id): return
