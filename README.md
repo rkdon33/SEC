@@ -1,12 +1,12 @@
-# 🛡️ SecurityBot - Discord Security & Protection Bot
+# 🛡️ SecureAura - Discord Security & Protection Bot
 
-**SecurityBot** is a powerful, modern Discord bot designed to protect your server from raids, nukes, spammers, and malicious activities. Built for simplicity, flexibility, and speed, it's the ideal solution to keep your community safe.
+**SecureAura** is a powerful, modern Discord bot designed to protect your server from raids, nukes, spammers, and malicious activities. Built for simplicity, flexibility, and speed, it's the ideal solution to keep your community safe.
 
 > ✅ Design by **RK DON**  
-> 🌐 [Official GitHub Repository][(https://github.com/rkdon33/SecureAura)]
-> 💬 [Support Server][(https://discord.gg/ERYMCnhWjG)]  
+> 🌐 [Official GitHub Repository](https://github.com/rkdon33/SecureAura)
+> 💬 [Support Server](https://discord.gg/ERYMCnhWjG) 
 > 🧩 [Invite the Bot]
-[(https://discord.com/oauth2/authorize?client_id=1369720419778564256)]
+(https://discord.com/oauth2/authorize?client_id=1369720419778564256)
 ---
 
 ## 🚀 Features
