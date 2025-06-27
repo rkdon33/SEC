@@ -1,11 +1,9 @@
 {
-  "guild_id": {
-{
-  "guild_id": {
-    "activated_by": 123456789012345678,
-    "activated_on": "2025-06-27T07:00:00",
+  "123456789012345678": {
+    "activated_by": 987654321098765432,
+    "activated_on": "2025-06-27T09:30:00.123456",
     "duration": "30d",
-    "expires_on": "2025-07-27T07:00:00",
+    "expires_on": "2025-07-27T09:30:00.123456",
     "features": {
       "server_rename": false,
       "server_icon": false,
@@ -17,4 +15,4 @@
       "spam": false
     }
   }
-  }
+}
