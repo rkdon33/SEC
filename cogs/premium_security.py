@@ -91,6 +91,12 @@ class PremiumPanelView(discord.ui.View):
 
     def make_toggle_callback(self, feature_key):
         async def callback(interaction: discord.Interaction):
+            # Only allow admins of this guild to use the panel
+            if not interaction.user.guild_permissions.administrator:
+                await interaction.response.send_message(
+                    "You must be an Administrator of this server to use the premium settings.", ephemeral=True
+                )
+                return
             self.premium_data = load_premium()
             features = self.premium_data[str(self.guild_id)]["features"]
             features[feature_key] = not features[feature_key]
@@ -139,7 +145,13 @@ class PremiumSecurity(commands.Cog):
             view.add_item(discord.ui.Button(label="JOIN", url=PREMIUM_JOIN_LINK, style=discord.ButtonStyle.link))
             await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
             return
-
+        # Only allow admins of this guild to use the premium panel
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message(
+                "You must be an Administrator of this server to use the premium settings.",
+                ephemeral=True
+            )
+            return
         view = PremiumPanelView(self, guild_id)
         embed = self.premium_panel_embed(guild_id)
         await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
