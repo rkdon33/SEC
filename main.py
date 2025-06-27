@@ -45,6 +45,7 @@ initial_extensions = [
     'cogs.log_channel',
     'cogs.invite_log',
     'cogs.premium_security',
+    'cogs.greet_pannel',
     'cogs.help'
 ]
 
