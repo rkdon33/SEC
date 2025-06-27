@@ -186,7 +186,7 @@ class PremiumSecurity(commands.Cog):
                         f"- Anti Invite Delete\n"
                         f"- Anti Ghost Ping\n"
                         f"- Anti Spam**\n\n"
-                        f"**Note:**\nUse (/antipremium) to setup premium features.",
+                        f"**Note:**\nUse (`/antipremium`) to setup premium features.",
             color=discord.Color.gold()
         )
 
