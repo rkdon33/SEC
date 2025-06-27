@@ -1,0 +1,20 @@
+{
+  "guild_id": {
+{
+  "guild_id": {
+    "activated_by": 123456789012345678,
+    "activated_on": "2025-06-27T07:00:00",
+    "duration": "30d",
+    "expires_on": "2025-07-27T07:00:00",
+    "features": {
+      "server_rename": false,
+      "server_icon": false,
+      "role_rename": false,
+      "channel_rename": false,
+      "emoji_delete": false,
+      "invite_delete": false,
+      "ghost_ping": false,
+      "spam": false
+    }
+  }
+  }
