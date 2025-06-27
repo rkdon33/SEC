@@ -4,7 +4,6 @@ from discord import app_commands
 from datetime import datetime, timedelta
 import json
 import os
-import random
 
 PREMIUM_FILE = "premium_servers.json"
 PREMIUM_JOIN_LINK = "https://discord.gg/ERYMCnhWjG"
@@ -53,7 +52,6 @@ def is_premium(guild_id):
     return datetime.utcnow() < expires
 
 async def get_or_create_premium_log_channel(guild):
-    # Changed to premium-logs
     channel = discord.utils.get(guild.text_channels, name="premium-logs")
     if channel:
         return channel
@@ -317,7 +315,8 @@ class PremiumSecurity(commands.Cog):
             if user_id:
                 member = guild.get_member(user_id)
             else:
-                async for entry in guild.audit_logs(limit=3, action=None):
+                entry = None
+                async for entry in guild.audit_logs(limit=3):
                     if entry.user and entry.user != guild.me:
                         member = entry.user
                         break
